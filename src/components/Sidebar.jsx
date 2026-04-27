@@ -10,7 +10,7 @@ export default function Sidebar() {
     }`;
 
   return (
-    <div id="sidebar" className="w-[280px] bg-white border-r min-h-screen p-6 flex flex-column gap-6">
+    <div id="sidebar" className="w-[280px] bg-white border-r min-h-screen p-6 flex flex-col gap-6">
       <div id="sidebar-logo" className="mb-8">
         <span id="logo-title" className="text-2xl font-bold">Sedap <b className="text-hijau">.</b></span>
         <p className="text-gray-400 text-sm">Modern Admin Dashboard</p>

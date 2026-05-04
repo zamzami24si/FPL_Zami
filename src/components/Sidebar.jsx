@@ -1,4 +1,4 @@
-import { FaThLarge, FaList, FaHeadphonesAlt } from "react-icons/fa";
+import { FaThLarge, FaList, FaHeadphonesAlt, FaBoxOpen } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
@@ -18,26 +18,37 @@ export default function Sidebar() {
 
       <nav className="flex-1">
         <ul className="space-y-2 list-none p-0">
-
-            <li className="mt-10 text-[10px] text-gray-400 uppercase font-bold px-4">Test Errors</li>
-            <li><NavLink to="/error-400" className={menuClass}>Error 400</NavLink></li>
-            <li><NavLink to="/error-401" className={menuClass}>Error 401</NavLink></li>
-            <li><NavLink to="/error-403" className={menuClass}>Error 403</NavLink></li>
+          {/* MENU UTAMA */}
           <li>
             <NavLink to="/" className={menuClass}>
               <FaThLarge /> <span>Dashboard</span>
             </NavLink>
           </li>
+
+          {/* MENU DAFTAR PRODUK (Halaman Tabel 30 Data) */}
+          <li>
+            <NavLink to="/products" className={menuClass} end>
+              <FaBoxOpen /> <span>Products</span>
+            </NavLink>
+          </li>
+
           <li>
             <NavLink to="/orders" className={menuClass}>
               <FaList /> <span>Orders</span>
             </NavLink>
           </li>
+          
           <li>
             <NavLink to="/customers" className={menuClass}>
               <FaHeadphonesAlt /> <span>Customers</span>
             </NavLink>
           </li>
+
+          {/* TEST ERRORS */}
+          <li className="mt-10 text-[10px] text-gray-400 uppercase font-bold px-4">Test Errors</li>
+          <li><NavLink to="/error-400" className={menuClass}>Error 400</NavLink></li>
+          <li><NavLink to="/error-401" className={menuClass}>Error 401</NavLink></li>
+          <li><NavLink to="/error-403" className={menuClass}>Error 403</NavLink></li>
         </ul>
       </nav>
       

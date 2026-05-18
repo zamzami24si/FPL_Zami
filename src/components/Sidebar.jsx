@@ -1,4 +1,11 @@
-import { FaThLarge, FaList, FaHeadphonesAlt, FaBoxOpen } from "react-icons/fa";
+import { 
+  FaThLarge, 
+  FaList, 
+  FaHeadphonesAlt, 
+  FaBoxOpen,
+  FaPuzzlePiece
+} from "react-icons/fa";
+
 import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
@@ -12,12 +19,15 @@ export default function Sidebar() {
   return (
     <div id="sidebar" className="w-[280px] bg-white border-r min-h-screen p-6 flex flex-col gap-6">
       <div id="sidebar-logo" className="mb-8">
-        <span id="logo-title" className="text-2xl font-bold">Sedap <b className="text-hijau">.</b></span>
+        <span id="logo-title" className="text-2xl font-bold">
+          Sedap <b className="text-hijau">.</b>
+        </span>
         <p className="text-gray-400 text-sm">Modern Admin Dashboard</p>
       </div>
 
       <nav className="flex-1">
         <ul className="space-y-2 list-none p-0">
+          
           {/* MENU UTAMA */}
           <li>
             <NavLink to="/" className={menuClass}>
@@ -25,10 +35,17 @@ export default function Sidebar() {
             </NavLink>
           </li>
 
-          {/* MENU DAFTAR PRODUK (Halaman Tabel 30 Data) */}
+          {/* MENU PRODUCTS */}
           <li>
             <NavLink to="/products" className={menuClass} end>
               <FaBoxOpen /> <span>Products</span>
+            </NavLink>
+          </li>
+
+          {/* MENU COMPONENTS */}
+          <li>
+            <NavLink to="/components" className={menuClass}>
+              <FaPuzzlePiece /> <span>Components</span>
             </NavLink>
           </li>
 
@@ -45,10 +62,27 @@ export default function Sidebar() {
           </li>
 
           {/* TEST ERRORS */}
-          <li className="mt-10 text-[10px] text-gray-400 uppercase font-bold px-4">Test Errors</li>
-          <li><NavLink to="/error-400" className={menuClass}>Error 400</NavLink></li>
-          <li><NavLink to="/error-401" className={menuClass}>Error 401</NavLink></li>
-          <li><NavLink to="/error-403" className={menuClass}>Error 403</NavLink></li>
+          <li className="mt-10 text-[10px] text-gray-400 uppercase font-bold px-4">
+            Test Errors
+          </li>
+
+          <li>
+            <NavLink to="/error-400" className={menuClass}>
+              Error 400
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/error-401" className={menuClass}>
+              Error 401
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/error-403" className={menuClass}>
+              Error 403
+            </NavLink>
+          </li>
         </ul>
       </nav>
       

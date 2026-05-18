@@ -7,9 +7,12 @@ const Orders = React.lazy(() => import("./pages/main/Orders"));
 const Customers = React.lazy(() => import("./pages/main/Customers"));
 const NotFound = React.lazy(() => import("./pages/main/NotFound"));
 
-// 1. TAMBAHKAN INI: Lazy Load untuk List dan Detail Produk
+// Products
 const Products = React.lazy(() => import("./pages/main/Products"));
 const ProductDetail = React.lazy(() => import("./pages/main/ProductDetail"));
+
+// Components Page
+const Components = React.lazy(() => import("./pages/main/Components"));
 
 // Lazy Load Pages - Auth
 const Login = React.lazy(() => import("./pages/auth/Login"));
@@ -31,15 +34,29 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/customers" element={<Customers />} />
-          
-          {/* 2. ROUTE PRODUK: Daftar Produk dan Detail Produk */}
+
+          {/* PRODUCTS */}
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<ProductDetail />} />
 
+          {/* COMPONENTS */}
+          <Route path="/components" element={<Components />} />
+
           {/* Error Pages */}
-          <Route path="/error-400" element={<NotFound code="400" message="Bad Request" />} />
-          <Route path="/error-401" element={<NotFound code="401" message="Unauthorized" />} />
-          <Route path="/error-403" element={<NotFound code="403" message="Forbidden" />} />
+          <Route
+            path="/error-400"
+            element={<NotFound code="400" message="Bad Request" />}
+          />
+
+          <Route
+            path="/error-401"
+            element={<NotFound code="401" message="Unauthorized" />}
+          />
+
+          <Route
+            path="/error-403"
+            element={<NotFound code="403" message="Forbidden" />}
+          />
         </Route>
 
         {/* AUTH */}

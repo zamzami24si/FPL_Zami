@@ -10,6 +10,8 @@ const NotFound = React.lazy(() => import("./pages/main/NotFound"));
 // Products
 const Products = React.lazy(() => import("./pages/main/Products"));
 const ProductDetail = React.lazy(() => import("./pages/main/ProductDetail"));
+const FiturXyz = React.lazy(() => import("./pages/main/FiturXyz"));
+
 
 // Components Page
 const Components = React.lazy(() => import("./pages/main/Components"));
@@ -38,6 +40,7 @@ function App() {
           {/* PRODUCTS */}
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="/fitur-xyz" element={<FiturXyz />} />
 
           {/* COMPONENTS */}
           <Route path="/components" element={<Components />} />

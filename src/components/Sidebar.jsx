@@ -61,6 +61,12 @@ export default function Sidebar() {
             </NavLink>
           </li>
 
+          <li>
+            <NavLink to="/fitur-xyz" className={menuClass}>
+              <FaPuzzlePiece /> <span>Fitur Xyz</span>
+            </NavLink>
+          </li>
+
           {/* TEST ERRORS */}
           <li className="mt-10 text-[10px] text-gray-400 uppercase font-bold px-4">
             Test Errors
